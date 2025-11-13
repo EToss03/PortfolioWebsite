@@ -125,7 +125,7 @@ header.visible {
 
     main h2 {
         font-size: 26px;
-        min-width: 150px;
+        min-width: 140px;
     }
 
     /* Creates the ribbon end effect */
@@ -136,12 +136,12 @@ header.visible {
         left: -1px;
         border-top: 15px solid #606060;
         /* Darker shade header/footer color */
-        border-left: 20px solid transparent;
+        border-left: 15px solid transparent;
         filter: brightness(70%);
     }
 
     p {
-        font-size: 10.5px;
+        font-size: 14px;
     }
 
     header h1 {
@@ -167,12 +167,35 @@ header.visible {
 
 @media screen and (max-width: 480px) {
 
+    main h2 {
+        font-size: 20px;
+        min-width: 120px;
+        margin: 5px;
+    }
+
+    /* Creates the ribbon end effect */
+    main h2::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        border-top: 10px solid #606060;
+        /* Darker shade header/footer color */
+        border-left: 15px solid transparent;
+        filter: brightness(70%);
+    }
+
     body {
         margin-top: 130px;
     }
-
+    
     header h1 {
         font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 12px;
+        padding: 1px 10px;
     }
 
     header .title-container {
@@ -478,6 +501,84 @@ header.visible {
 
 .pdf-actions .btn:hover {
     background-color: #555;
+}
+
+.repo-tree {
+  background-color: #1e1e1e;
+  color: #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Consolas', monospace;
+  max-width: 600px;
+  margin: auto;
+}
+
+.folder {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 0;
+  user-select: none;
+}
+
+.folder:hover {
+  background-color: #252526;
+}
+
+.folder i.fa-folder {
+  margin-right: 8px;
+  color: #fbc531;
+}
+
+.folder i.fa-caret-right {
+  margin-right: 6px;
+  transition: transform 0.2s ease;
+}
+
+.folder.open i.fa-caret-right {
+  transform: rotate(90deg);
+}
+
+.folder-name {
+  font-weight: 500;
+}
+
+.contents {
+  display: none;
+  margin-left: 1.5rem;
+  border-left: 1px dashed #444;
+  padding-left: 0.5rem;
+}
+
+.file, .subfolder {
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+}
+
+.file i {
+  margin-right: 8px;
+  color: #6cace4;
+}
+
+.github-link {
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #6cace4;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: #9cd1ff;
+}
+
+.repo-contents {
+  transition: all 0.3s ease;
+}
+.folder:hover {
+  background-color: #252526;
 }
 
 /* Footer Base Styles */
