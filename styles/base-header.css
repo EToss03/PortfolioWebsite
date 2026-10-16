@@ -1,0 +1,280 @@
+/* Main body of content style */
+
+main {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: solid 1px black;
+    filter: drop-shadow(0 0 3px black);
+}
+
+/* Ribbon heading styles */
+main h2 {
+    position: relative;
+    text-align: center;
+    font-family: Baskerville;
+    padding: 2px 20px;
+    margin: 20px 0 30px -40px;
+    /* Negative left margin makes it pop out */
+    background: #bababa;
+    color: rgb(0, 0, 0);
+    filter: drop-shadow(0 0 2px black);
+    font-size: 32px;
+    width: fit-content;
+    /* Make ribbon only as wide as needed */
+    min-width: 200px;
+    /* Minimum width for consistency */
+    border: solid 2px #000000;
+    border-radius: 5px;
+    transition: transform .2s ease;
+}
+
+/* Creates the ribbon end effect */
+main h2::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    border-top: 15px solid #606060;
+    /* Darker shade header/footer color */
+    border-left: 20px solid transparent;
+    filter: brightness(70%);
+}
+
+main h2:hover {
+    transform: translate(10px);
+}
+
+/* Existing header styles remain the same, scaling for mobile devices*/
+
+main:last-of-type {
+    margin-bottom: 10px;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 160px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: rgb(0, 90, 30);
+    padding: 10px;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(165, 165, 165);
+    z-index: 500;
+    transition: top 0.3s ease, background-color 0.3s ease;
+    margin: 10px;
+    border-radius: 15px;
+    border: solid 1px black;
+    filter: drop-shadow(0 0 3px black);
+}
+
+header h1 {
+    padding-right: 15px;
+    font-size: 2.4rem;
+    font-family: Baskerville;
+    font-weight: bold;
+    text-align: center;
+}
+
+header h1 span {
+    color: rgb(32, 32, 32);
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+header .title-container img {
+    height: 80px;
+    width: 80px;
+    border-radius: 30%;
+    border: solid 3px rgb(32, 32, 32);
+    filter: drop-shadow(0 0 1px black);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    transform: translateX(-35px);
+}
+
+header.hidden {
+    top: -300px;
+}
+
+header.visible {
+    background-color: rgb(165, 165, 165);
+}
+
+/* Existing header styles remain the same, scaling for mobile devices*/
+
+@media screen and (max-width: 768px) {
+
+    body {
+        margin-top: 140px;
+    }
+
+    main h2 {
+        font-size: 26px;
+        min-width: 140px;
+    }
+
+    /* Creates the ribbon end effect */
+    main h2::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        border-top: 15px solid #606060;
+        /* Darker shade header/footer color */
+        border-left: 15px solid transparent;
+        filter: brightness(70%);
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        /* Smaller font size for mobile */
+    }
+
+    header .title-container {
+        border-radius: 34px;
+    }
+
+    header .title-container img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .logo-title {
+        margin-left: 0;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    main h2 {
+        font-size: 20px;
+        min-width: 120px;
+        margin: 5px;
+    }
+
+    /* Creates the ribbon end effect */
+    main h2::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        border-top: 10px solid #606060;
+        /* Darker shade header/footer color */
+        border-left: 15px solid transparent;
+        filter: brightness(70%);
+    }
+
+    body {
+        margin-top: 130px;
+    }
+    
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 12px;
+        padding: 1px 10px;
+    }
+
+    header .title-container {
+        border-radius: 30px;
+    }
+
+    header .title-container img {
+        height: 50px;
+        width: 50px;
+    }
+
+}
+
+
+/* Logo and Title Styling */
+.logo-title {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-title h1 {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.spartan-logo {
+    width: 70px;
+    height: 80px;
+    color: #004403;
+    /* Adjust this to match your design */
+}
+
+/* Title configuration */
+
+.title-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    gap: 20px;
+    background-color: #7d7d7d;
+    border: solid 2px black;
+    border-radius: 38px;
+    filter: drop-shadow(0 0 2px black);
+}
+
+.main-title {
+    font-size: 2.5rem;
+    white-space: nowrap;
+}
+
+.social-icons {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    transform: scale(50%);
+    transform: translate(-10px, 30%);
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons svg {
+    fill: #7f7f7f;
+    border-radius: 14px;
+    border: solid 2px black;
+    background-color: black;
+    filter: drop-shadow(0 0 2px black);
+}
+

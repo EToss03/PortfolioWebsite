@@ -1,0 +1,115 @@
+/* Footer Base Styles */
+footer {
+    position: relative;
+    width: 100%;
+    background-color: rgb(165, 165, 165);
+    border-radius: 15px;
+    border: solid 1px black;
+    filter: drop-shadow(0 0 3px black);
+    overflow: hidden;
+    /* Keeps scrolling content inside footer */
+}
+
+/* Scrolling Container - Holds all footer sections */
+.footer-scroll-container {
+    display: flex;
+    gap: 2rem;
+    /* Space between footer sections */
+    padding: 1rem;
+    animation: scrollFooter 20s linear infinite;
+    white-space: nowrap;
+    /* Prevents text wrapping */
+    position: relative;
+}
+
+/* Pause animation on hover */
+.footer-scroll-container:hover {
+    animation-play-state: paused;
+}
+
+/* Individual Footer Section */
+.footer-section {
+    display: flex;
+    min-width: 300px;
+    /* Minimum width of each section */
+    padding: 1rem;
+    background-color: rgb(140, 140, 140);
+    /* Slightly darker than footer */
+    filter: drop-shadow(0 0 3px);
+    border-radius: 30px;
+    border: solid 1px black;
+    gap: 1rem;
+    /* Space between logo and text */
+}
+
+/* Logo Container */
+.footer-section .logo-container {
+    flex-shrink: 0;
+    /* Prevents logo from shrinking */
+    width: 80px;
+    /* Fixed width for logo area */
+}
+
+/* Logo SVG Styling */
+.footer-section .logo-container svg {
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 32px;
+    border: solid 3px rgb(32, 32, 32);
+    filter: drop-shadow(0 0 1px black);
+}
+
+/* Text Content Container */
+.footer-section .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+/* Text Styles */
+.footer-section h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    color: #000000;
+}
+
+.footer-section h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 4px;
+    color: #000000;
+    line-height: 1.2;
+}
+
+/* Scrolling Animation */
+@keyframes scrollFooter {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-124%);
+    }
+}
+
+/* Link Styles */
+footer a {
+    color: #000000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    width: 90%;
+}
+

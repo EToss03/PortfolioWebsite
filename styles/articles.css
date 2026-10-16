@@ -1,0 +1,31 @@
+/* Article images: alternating left/right alignment */
+.article-img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.img-left {
+    float: left;
+    margin: 0 1rem 1rem 0;
+}
+
+.img-right {
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .article-img {
+        max-width: 100%;
+        float: none;
+        margin: 0 0 1rem 0;
+    }
+}

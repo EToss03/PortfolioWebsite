@@ -1,0 +1,18 @@
+rule bundle
+  command = python3 tools/bundle_assets.py $out $in
+  description = Bundling $out
+
+rule html
+  command = python3 tools/build_html.py $out "$title" $in
+  description = Building $out
+
+build dist/style.css: bundle styles/base-header.css styles/navigation.css styles/animations-content.css styles/footer.css styles/articles.css | tools/bundle_assets.py
+build dist/script.js: bundle scripts/animations.js scripts/header.js scripts/navigation.js scripts/github-repos.js | tools/bundle_assets.py
+
+build dist/index.html: html templates/main.html content/home.html | tools/build_html.py
+  title = My Portfolio
+
+build dist/buildlog.html: html templates/main.html content/buildlog.html | tools/build_html.py
+  title = How This Site Was Made
+
+default dist/style.css dist/script.js dist/index.html dist/buildlog.html

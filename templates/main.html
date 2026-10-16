@@ -4,11 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How This Site Was Made</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+    <div class="ham-menu">
+        <nav>
+            <span></span>
+            <span></span>
+            <span></span>
+        </nav>
+    </div>
+    <div class="off-screen-menu">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <hr>
+                <li><a href="index.html#projects">PROJECTS</a></li>
+                <hr>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <hr>
+                <li><a href="index.html#contact">CONTACT</a></li>
+                <hr>
+                <li><a href="buildlog.html" style="font-size: 18px;">How This Site Was Built</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <header>
         <div class="container">
@@ -39,152 +62,116 @@
         </div>
 
     </header>
-    <div class="ham-menu">
-        <nav>
-            <span></span>
-            <span></span>
-            <span></span>
-        </nav>
-    </div>
-    <div class="off-screen-menu">
 
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <hr>
-                <li><a href="index.html">PROJECTS</a></li>
-                <hr>
-                <li><a href="index.html">ABOUT</a></li>
-                <hr>
-                <li><a href="index.html">CONTACT</a></li>
-                <hr>
-                <li><a href="buildlog.html" style="font-size: 18px;">How This Site Was Built</a></li>
-            </ul>
-        </nav>
-    </div>
-    <main class="container fade-in">
-        <section id="build-process" class="container">
-            <h2>How This Website Was Built</h2>
-
-            <h3>Core Technologies</h3>
-            <p>Building a modern website requires orchestrating three core technologies: HTML for structure, CSS for
-                styling, and JavaScript for interactivity. This portfolio site demonstrates how these elements work
-                together to create a responsive, professional web presence.</p>
-
-            <h3>The Foundation: HTML Structure</h3>
-            <p>The site begins with HTML5, which provides the semantic structure and content hierarchy. Think of HTML as
-                the skeleton of the website – it defines where each element goes and how they relate to one another. The
-                site uses semantic tags like header, main, section, and footer to create a logical document outline that
-                both browsers and search engines can understand.</p>
-            <p>Key sections are marked with unique IDs (like "about" and "projects"), which serve as anchors for
-                navigation and styling. This semantic structure not only improves accessibility but also makes the
-                codebase more maintainable.</p>
-
-            <h3>Visual Design: CSS Styling</h3>
-            <p>CSS transforms the basic HTML structure into a visually appealing design. The site employs a modular CSS
-                approach, where styles are organized by component and functionality. For instance, the header uses fixed
-                positioning with a smooth transition effect when scrolling, creating a modern navigation experience.</p>
-            <p>The color scheme draws from a carefully selected palette, with the primary green (#005A1E) establishing
-                the site's professional identity. Responsive design principles ensure the site looks great on all
-                devices – this is achieved through flexible grids, relative units (like rem and %), and strategic media
-                queries.</p>
-            <p>Special attention was paid to project containers and animations. The fade-in effect when scrolling uses
-                CSS transitions combined with JavaScript triggers, creating subtle but engaging visual feedback. The
-                hamburger menu transformation and off-screen navigation demonstrate how CSS animations can enhance user
-                experience.</p>
-
-            <h3>Interactivity: JavaScript Enhancement</h3>
-            <p>JavaScript brings the site to life with dynamic behaviors. The scroll-based animations use the
-                Intersection Observer API, a modern approach that's more performance-efficient than traditional scroll
-                event listeners. The code monitors elements with the "fade-in" class and triggers their animations when
-                they enter the viewport.</p>
-            <p>The hamburger menu implementation showcases event delegation and state management. Rather than attaching
-                individual event listeners to each menu item, a single listener on the document handles all menu-related
-                interactions. This approach improves performance and makes the code more maintainable.</p>
-
-            <h3>Performance Considerations</h3>
-            <p>Several optimization techniques are employed throughout the site. CSS animations use the transform and
-                opacity properties, which are hardware-accelerated in modern browsers. Images are optimized and served
-                in modern formats, and the SVG logo ensures sharp rendering at any size.</p>
-            <p>The JavaScript code is modular and event-driven, with clear separation of concerns. Each feature
-                (scrolling animations, menu handling, etc.) is isolated in its own scope, making the code easier to
-                debug and maintain.</p>
-
-            <h3>Development Process</h3>
-            <p>The site was built using a progressive enhancement approach. Starting with semantic HTML, adding styling
-                layers with CSS, and finally incorporating JavaScript for enhanced functionality. This ensures the site
-                remains functional even if JavaScript fails to load, providing a robust user experience across different
-                browsers and devices.</p>
-            <p>Version control with Git helped track changes and maintain code history, while modern development tools
-                like VS Code and Chrome DevTools facilitated debugging and optimization. The result is a performant,
-                accessible, and maintainable website that effectively showcases my current professional work while demonstrating
-                technical expertise in front-end web development.</p>
-        </section>
-    </main>
-
-    <br>
-
-    <main class="container fade-in">
-        <section id="backend-process" class="container">
-            <h2>How This Website Is Hosted</h2>
-
-            <h3>Backend Development</h3>
-            <p></p>
-
-            <h3>The Foundation: HTML Structure</h3>
-            <p>The site begins with HTML5, which provides the semantic structure and content hierarchy. Think of HTML as
-                the skeleton of the website – it defines where each element goes and how they relate to one another. The
-                site uses semantic tags like header, main, section, and footer to create a logical document outline that
-                both browsers and search engines can understand.</p>
-            <p>Key sections are marked with unique IDs (like "about" and "projects"), which serve as anchors for
-                navigation and styling. This semantic structure not only improves accessibility but also makes the
-                codebase more maintainable.</p>
-
-            <h3>Visual Design: CSS Styling</h3>
-            <p>CSS transforms the basic HTML structure into a visually appealing design. The site employs a modular CSS
-                approach, where styles are organized by component and functionality. For instance, the header uses fixed
-                positioning with a smooth transition effect when scrolling, creating a modern navigation experience.</p>
-            <p>The color scheme draws from a carefully selected palette, with the primary green (#005A1E) establishing
-                the site's professional identity. Responsive design principles ensure the site looks great on all
-                devices – this is achieved through flexible grids, relative units (like rem and %), and strategic media
-                queries.</p>
-            <p>Special attention was paid to micro-interactions and animations. The fade-in effect when scrolling uses
-                CSS transitions combined with JavaScript triggers, creating subtle but engaging visual feedback. The
-                hamburger menu transformation and off-screen navigation demonstrate how CSS animations can enhance user
-                experience.</p>
-
-            <h3>Interactivity: JavaScript Enhancement</h3>
-            <p>JavaScript brings the site to life with dynamic behaviors. The scroll-based animations use the
-                Intersection Observer API, a modern approach that's more performance-efficient than traditional scroll
-                event listeners. The code monitors elements with the "fade-in" class and triggers their animations when
-                they enter the viewport.</p>
-            <p>The hamburger menu implementation showcases event delegation and state management. Rather than attaching
-                individual event listeners to each menu item, a single listener on the document handles all menu-related
-                interactions. This approach improves performance and makes the code more maintainable.</p>
-
-            <h3>Performance Considerations</h3>
-            <p>Several optimization techniques are employed throughout the site. CSS animations use the transform and
-                opacity properties, which are hardware-accelerated in modern browsers. Images are optimized and served
-                in modern formats, and the SVG logo ensures sharp rendering at any size.</p>
-            <p>The JavaScript code is modular and event-driven, with clear separation of concerns. Each feature
-                (scrolling animations, menu handling, etc.) is isolated in its own scope, making the code easier to
-                debug and maintain.</p>
-
-            <h3>Development Process</h3>
-            <p>The site was built using a progressive enhancement approach – starting with semantic HTML, adding styling
-                layers with CSS, and finally incorporating JavaScript for enhanced functionality. This ensures the site
-                remains functional even if JavaScript fails to load, providing a robust user experience across different
-                browsers and devices.</p>
-            <p>Version control with Git helped track changes and maintain code history, while modern development tools
-                like VS Code and Chrome DevTools facilitated debugging and optimization. The result is a performant,
-                accessible, and maintainable website that effectively showcases professional work while demonstrating
-                technical expertise in front-end web development.</p>
-        </section>
-    </main>
-
+{{content}}
     <footer>
         <div class="footer-scroll-container">
             <!-- First section (static) -->
+            <div class="footer-section">
+                <div class="logo-container">
+                    <!-- Your existing logo/title content -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80" width="70" viewBox="0 0 52.5 60.655">
+                        <path
+                            d="M32.755 0.304C18.435 0.328 6.36 9.65 2.853 17.859c-5.231 12.243 0.18 22.008 0.865 25.946 1.723 9.931 -2.66 12.092 -3.292 12.881 2.839 -0.159 4.54 -2.21 5.96 -4.578 1.106 -2.05 1.65 -4.414 1.807 -6.78C8.825 40.911 6.905 36.075 7.064 31.658c0.473 -6.628 5.054 -12.801 10.735 -16.274 8.519 -5.048 18.658 -4.541 26.391 -0.982 1.578 -3.313 4.684 -9.978 4.684 -9.978C43.408 1.506 37.934 0.298 32.755 0.306zm-1.839 13.423a23.003 23.003 0 0 0 -1.803 0.086l-0.212 7.205c0.299 0.005 0.754 0.074 0.762 0.043 0.085 -0.345 0.365 -2.813 2.469 -4.613 2.34 -2.003 5.416 -1.804 5.385 -1.823 -2.299 -0.702 -4.649 -0.915 -6.601 -0.896zm-3.498 0.299c-0.056 0.056 -1.652 0.298 -3.008 0.678l1.44 6.737c0.056 0.028 1.382 -0.296 1.4 -0.296zm-4.576 1.229c-1.018 0.297 -2.39 0.886 -2.713 1.103l3.01 5.974c1.532 -0.519 1.526 -0.536 1.526 -0.509zm-4.025 1.78c-1.23 0.593 -2.014 1.229 -2.373 1.483L20.757 23.627c0.008 0.061 1.242 -0.69 1.27 -0.746zm-3.517 2.374c-0.975 0.846 -1.271 1.227 -1.865 1.949l5.079 3.974c0.028 -0.029 1.107 -1.009 1.107 -1.009zm-2.743 3.113a9.912 9.912 0 0 0 -1.282 2.141l5.381 2.712c0.015 -0.018 0.875 -1.112 0.891 -1.103zm17.379 0.717c-1.624 -0.003 -3.23 0.239 -4.736 0.782 -3.946 1.419 -6.499 4.249 -8.191 8.086 -2.823 6.396 1.167 11.277 1.167 16.484 0.158 1.893 -0.938 5.691 -0.781 5.669 5.118 -0.708 8.58 -2.34 12.998 -3.127 3.009 2.627 13.295 8.679 15.541 8.99 0.155 0.021 -2.606 -8.963 -2.053 -18.863 -2.604 0.422 -5.961 -0.683 -7.917 -2.834 2.599 -3.733 12.022 -3.322 10.654 6.647 -0.021 0.154 5.574 1.1 5.472 0.976 -3.519 -4.299 -4.987 -8.358 -7.036 -13.389 -1.959 -4.806 -5.973 -8.044 -11.338 -8.992 -1.243 -0.275 -2.516 -0.426 -3.779 -0.429zm-19.466 2.905c-0.34 0.68 -0.593 1.695 -0.721 2.246l5.592 1.059c0.155 -0.395 0.344 -0.743 0.572 -1.192l-5.444 -2.112zm-1.061 3.857c-0.465 2.967 -0.498 5.72 -0.248 7.182 0.007 0.02 0.441 -2.514 1.882 -3.938 1.255 -1.243 2.853 -1.486 3.42 -1.467 0 -0.006 0.284 -0.97 0.244 -0.972z"
+                            fill="#18453b" />
+                        </svg>
+                </div>
+                <div>
+                    <h2>Evan Ross</h2>
+                    <h3>Michigan State University</h3>
+                    <h3>College of Engineering</h3>
+                    <h3>Computer Science Engineering</h3>
+                </div>
+            </div>
+
+
+    
+            <!-- Additional sections that will scroll -->
+            <div class="footer-section">
+                <div class="logo-container">
+                    <!-- Your existing logo/title content -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80" width="70" viewBox="0 0 52.5 60.655">
+                        <path
+                            d="M32.755 0.304C18.435 0.328 6.36 9.65 2.853 17.859c-5.231 12.243 0.18 22.008 0.865 25.946 1.723 9.931 -2.66 12.092 -3.292 12.881 2.839 -0.159 4.54 -2.21 5.96 -4.578 1.106 -2.05 1.65 -4.414 1.807 -6.78C8.825 40.911 6.905 36.075 7.064 31.658c0.473 -6.628 5.054 -12.801 10.735 -16.274 8.519 -5.048 18.658 -4.541 26.391 -0.982 1.578 -3.313 4.684 -9.978 4.684 -9.978C43.408 1.506 37.934 0.298 32.755 0.306zm-1.839 13.423a23.003 23.003 0 0 0 -1.803 0.086l-0.212 7.205c0.299 0.005 0.754 0.074 0.762 0.043 0.085 -0.345 0.365 -2.813 2.469 -4.613 2.34 -2.003 5.416 -1.804 5.385 -1.823 -2.299 -0.702 -4.649 -0.915 -6.601 -0.896zm-3.498 0.299c-0.056 0.056 -1.652 0.298 -3.008 0.678l1.44 6.737c0.056 0.028 1.382 -0.296 1.4 -0.296zm-4.576 1.229c-1.018 0.297 -2.39 0.886 -2.713 1.103l3.01 5.974c1.532 -0.519 1.526 -0.536 1.526 -0.509zm-4.025 1.78c-1.23 0.593 -2.014 1.229 -2.373 1.483L20.757 23.627c0.008 0.061 1.242 -0.69 1.27 -0.746zm-3.517 2.374c-0.975 0.846 -1.271 1.227 -1.865 1.949l5.079 3.974c0.028 -0.029 1.107 -1.009 1.107 -1.009zm-2.743 3.113a9.912 9.912 0 0 0 -1.282 2.141l5.381 2.712c0.015 -0.018 0.875 -1.112 0.891 -1.103zm17.379 0.717c-1.624 -0.003 -3.23 0.239 -4.736 0.782 -3.946 1.419 -6.499 4.249 -8.191 8.086 -2.823 6.396 1.167 11.277 1.167 16.484 0.158 1.893 -0.938 5.691 -0.781 5.669 5.118 -0.708 8.58 -2.34 12.998 -3.127 3.009 2.627 13.295 8.679 15.541 8.99 0.155 0.021 -2.606 -8.963 -2.053 -18.863 -2.604 0.422 -5.961 -0.683 -7.917 -2.834 2.599 -3.733 12.022 -3.322 10.654 6.647 -0.021 0.154 5.574 1.1 5.472 0.976 -3.519 -4.299 -4.987 -8.358 -7.036 -13.389 -1.959 -4.806 -5.973 -8.044 -11.338 -8.992 -1.243 -0.275 -2.516 -0.426 -3.779 -0.429zm-19.466 2.905c-0.34 0.68 -0.593 1.695 -0.721 2.246l5.592 1.059c0.155 -0.395 0.344 -0.743 0.572 -1.192l-5.444 -2.112zm-1.061 3.857c-0.465 2.967 -0.498 5.72 -0.248 7.182 0.007 0.02 0.441 -2.514 1.882 -3.938 1.255 -1.243 2.853 -1.486 3.42 -1.467 0 -0.006 0.284 -0.97 0.244 -0.972z"
+                            fill="#18453b" />
+                        </svg>
+                </div>
+                <div>
+                    <h2>Goals</h2>
+                    <!-- Goals content -->
+                     <!--Put a short list of website goals, like build a set of open source tools from scratch that fulfill a 
+                                purpose, such as using XCode or another framework to create a simple program that can easily be 
+                                enabled, disabled, uninstalled, and choose to be run at boot or not. This program will fulfill a simple goal, 
+                                like a border for the menu bar, putting a bubble around the icons. Then, if MacBook's switch to a thinner border, 
+                                there is the option to switch a central based top bar that only pops out upon scrolling to the top. This bar will be 
+                                much like the Dock. The clock will be slightly larger and centered. More subtle and responsive animations. Space between the interactions, 
+                                but still parallax to make room for 
+                                extra menus and user visibility (The size will be widely adjustable for users with visual impairment, and there will 
+                                still be a limit to how far the menus can go. an optional sub menu will instead be used that can be dropped down on 
+                                the right hand side, and sorting will be managed by app developer. basically same on right hand side, except option for scrolling as well. 
+                                calender then battery are permanently (but optional within settings) to the right of the center and 2 pixels larger clock. 
+                                this clock will be left mostly alone by me, but a seperate class will be created for it to be worked off of. a perfect jumping point if anyone
+                                else would like to upload their own clock modules with full accreditation and links to pages.
+                                Latest goal is to make a text-based game using a Large Language Model.
+                                .)
+                            -->
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <div class="logo-container">
+                    <!-- existing logo/title content -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80" width="70" viewBox="0 0 52.5 60.655">
+                        <path
+                            d="M32.755 0.304C18.435 0.328 6.36 9.65 2.853 17.859c-5.231 12.243 0.18 22.008 0.865 25.946 1.723 9.931 -2.66 12.092 -3.292 12.881 2.839 -0.159 4.54 -2.21 5.96 -4.578 1.106 -2.05 1.65 -4.414 1.807 -6.78C8.825 40.911 6.905 36.075 7.064 31.658c0.473 -6.628 5.054 -12.801 10.735 -16.274 8.519 -5.048 18.658 -4.541 26.391 -0.982 1.578 -3.313 4.684 -9.978 4.684 -9.978C43.408 1.506 37.934 0.298 32.755 0.306zm-1.839 13.423a23.003 23.003 0 0 0 -1.803 0.086l-0.212 7.205c0.299 0.005 0.754 0.074 0.762 0.043 0.085 -0.345 0.365 -2.813 2.469 -4.613 2.34 -2.003 5.416 -1.804 5.385 -1.823 -2.299 -0.702 -4.649 -0.915 -6.601 -0.896zm-3.498 0.299c-0.056 0.056 -1.652 0.298 -3.008 0.678l1.44 6.737c0.056 0.028 1.382 -0.296 1.4 -0.296zm-4.576 1.229c-1.018 0.297 -2.39 0.886 -2.713 1.103l3.01 5.974c1.532 -0.519 1.526 -0.536 1.526 -0.509zm-4.025 1.78c-1.23 0.593 -2.014 1.229 -2.373 1.483L20.757 23.627c0.008 0.061 1.242 -0.69 1.27 -0.746zm-3.517 2.374c-0.975 0.846 -1.271 1.227 -1.865 1.949l5.079 3.974c0.028 -0.029 1.107 -1.009 1.107 -1.009zm-2.743 3.113a9.912 9.912 0 0 0 -1.282 2.141l5.381 2.712c0.015 -0.018 0.875 -1.112 0.891 -1.103zm17.379 0.717c-1.624 -0.003 -3.23 0.239 -4.736 0.782 -3.946 1.419 -6.499 4.249 -8.191 8.086 -2.823 6.396 1.167 11.277 1.167 16.484 0.158 1.893 -0.938 5.691 -0.781 5.669 5.118 -0.708 8.58 -2.34 12.998 -3.127 3.009 2.627 13.295 8.679 15.541 8.99 0.155 0.021 -2.606 -8.963 -2.053 -18.863 -2.604 0.422 -5.961 -0.683 -7.917 -2.834 2.599 -3.733 12.022 -3.322 10.654 6.647 -0.021 0.154 5.574 1.1 5.472 0.976 -3.519 -4.299 -4.987 -8.358 -7.036 -13.389 -1.959 -4.806 -5.973 -8.044 -11.338 -8.992 -1.243 -0.275 -2.516 -0.426 -3.779 -0.429zm-19.466 2.905c-0.34 0.68 -0.593 1.695 -0.721 2.246l5.592 1.059c0.155 -0.395 0.344 -0.743 0.572 -1.192l-5.444 -2.112zm-1.061 3.857c-0.465 2.967 -0.498 5.72 -0.248 7.182 0.007 0.02 0.441 -2.514 1.882 -3.938 1.255 -1.243 2.853 -1.486 3.42 -1.467 0 -0.006 0.284 -0.97 0.244 -0.972z"
+                            fill="#18453b" />
+                        </svg>
+
+                </div>
+                <div>
+                    <h2>Technologies</h2>
+                    <h3>Unix</h3>
+                    <h3>C++</h3>
+                    <h3>HTML</h3>
+                    <h3>CSS</h3>
+                    <h3>JavaScript</h3>
+                    <h3>And Much More!</h3>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <div class="logo-container">
+                    <!-- existing logo/title content -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80" width="70" viewBox="0 0 52.5 60.655">
+                        <path
+                            d="M32.755 0.304C18.435 0.328 6.36 9.65 2.853 17.859c-5.231 12.243 0.18 22.008 0.865 25.946 1.723 9.931 -2.66 12.092 -3.292 12.881 2.839 -0.159 4.54 -2.21 5.96 -4.578 1.106 -2.05 1.65 -4.414 1.807 -6.78C8.825 40.911 6.905 36.075 7.064 31.658c0.473 -6.628 5.054 -12.801 10.735 -16.274 8.519 -5.048 18.658 -4.541 26.391 -0.982 1.578 -3.313 4.684 -9.978 4.684 -9.978C43.408 1.506 37.934 0.298 32.755 0.306zm-1.839 13.423a23.003 23.003 0 0 0 -1.803 0.086l-0.212 7.205c0.299 0.005 0.754 0.074 0.762 0.043 0.085 -0.345 0.365 -2.813 2.469 -4.613 2.34 -2.003 5.416 -1.804 5.385 -1.823 -2.299 -0.702 -4.649 -0.915 -6.601 -0.896zm-3.498 0.299c-0.056 0.056 -1.652 0.298 -3.008 0.678l1.44 6.737c0.056 0.028 1.382 -0.296 1.4 -0.296zm-4.576 1.229c-1.018 0.297 -2.39 0.886 -2.713 1.103l3.01 5.974c1.532 -0.519 1.526 -0.536 1.526 -0.509zm-4.025 1.78c-1.23 0.593 -2.014 1.229 -2.373 1.483L20.757 23.627c0.008 0.061 1.242 -0.69 1.27 -0.746zm-3.517 2.374c-0.975 0.846 -1.271 1.227 -1.865 1.949l5.079 3.974c0.028 -0.029 1.107 -1.009 1.107 -1.009zm-2.743 3.113a9.912 9.912 0 0 0 -1.282 2.141l5.381 2.712c0.015 -0.018 0.875 -1.112 0.891 -1.103zm17.379 0.717c-1.624 -0.003 -3.23 0.239 -4.736 0.782 -3.946 1.419 -6.499 4.249 -8.191 8.086 -2.823 6.396 1.167 11.277 1.167 16.484 0.158 1.893 -0.938 5.691 -0.781 5.669 5.118 -0.708 8.58 -2.34 12.998 -3.127 3.009 2.627 13.295 8.679 15.541 8.99 0.155 0.021 -2.606 -8.963 -2.053 -18.863 -2.604 0.422 -5.961 -0.683 -7.917 -2.834 2.599 -3.733 12.022 -3.322 10.654 6.647 -0.021 0.154 5.574 1.1 5.472 0.976 -3.519 -4.299 -4.987 -8.358 -7.036 -13.389 -1.959 -4.806 -5.973 -8.044 -11.338 -8.992 -1.243 -0.275 -2.516 -0.426 -3.779 -0.429zm-19.466 2.905c-0.34 0.68 -0.593 1.695 -0.721 2.246l5.592 1.059c0.155 -0.395 0.344 -0.743 0.572 -1.192l-5.444 -2.112zm-1.061 3.857c-0.465 2.967 -0.498 5.72 -0.248 7.182 0.007 0.02 0.441 -2.514 1.882 -3.938 1.255 -1.243 2.853 -1.486 3.42 -1.467 0 -0.006 0.284 -0.97 0.244 -0.972z"
+                            fill="#18453b" />
+                        </svg>
+                </div>
+                <div>
+                    <h2>Get in Touch</h2>
+                    <h3>evanross594@gmail.com</h3>
+                    <h3><a href="https://www.linkedin.com/in/evan-ross-648bb829a/">LinkedIn</a></h3>
+                    <h3><a href="mailto:evanross594@gmail.com">Email me directly</a></h3>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <div class="logo-container">
+                    <!-- existing logo/title content -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80" width="70" viewBox="0 0 52.5 60.655">
+                        <path
+                            d="M32.755 0.304C18.435 0.328 6.36 9.65 2.853 17.859c-5.231 12.243 0.18 22.008 0.865 25.946 1.723 9.931 -2.66 12.092 -3.292 12.881 2.839 -0.159 4.54 -2.21 5.96 -4.578 1.106 -2.05 1.65 -4.414 1.807 -6.78C8.825 40.911 6.905 36.075 7.064 31.658c0.473 -6.628 5.054 -12.801 10.735 -16.274 8.519 -5.048 18.658 -4.541 26.391 -0.982 1.578 -3.313 4.684 -9.978 4.684 -9.978C43.408 1.506 37.934 0.298 32.755 0.306zm-1.839 13.423a23.003 23.003 0 0 0 -1.803 0.086l-0.212 7.205c0.299 0.005 0.754 0.074 0.762 0.043 0.085 -0.345 0.365 -2.813 2.469 -4.613 2.34 -2.003 5.416 -1.804 5.385 -1.823 -2.299 -0.702 -4.649 -0.915 -6.601 -0.896zm-3.498 0.299c-0.056 0.056 -1.652 0.298 -3.008 0.678l1.44 6.737c0.056 0.028 1.382 -0.296 1.4 -0.296zm-4.576 1.229c-1.018 0.297 -2.39 0.886 -2.713 1.103l3.01 5.974c1.532 -0.519 1.526 -0.536 1.526 -0.509zm-4.025 1.78c-1.23 0.593 -2.014 1.229 -2.373 1.483L20.757 23.627c0.008 0.061 1.242 -0.69 1.27 -0.746zm-3.517 2.374c-0.975 0.846 -1.271 1.227 -1.865 1.949l5.079 3.974c0.028 -0.029 1.107 -1.009 1.107 -1.009zm-2.743 3.113a9.912 9.912 0 0 0 -1.282 2.141l5.381 2.712c0.015 -0.018 0.875 -1.112 0.891 -1.103zm17.379 0.717c-1.624 -0.003 -3.23 0.239 -4.736 0.782 -3.946 1.419 -6.499 4.249 -8.191 8.086 -2.823 6.396 1.167 11.277 1.167 16.484 0.158 1.893 -0.938 5.691 -0.781 5.669 5.118 -0.708 8.58 -2.34 12.998 -3.127 3.009 2.627 13.295 8.679 15.541 8.99 0.155 0.021 -2.606 -8.963 -2.053 -18.863 -2.604 0.422 -5.961 -0.683 -7.917 -2.834 2.599 -3.733 12.022 -3.322 10.654 6.647 -0.021 0.154 5.574 1.1 5.472 0.976 -3.519 -4.299 -4.987 -8.358 -7.036 -13.389 -1.959 -4.806 -5.973 -8.044 -11.338 -8.992 -1.243 -0.275 -2.516 -0.426 -3.779 -0.429zm-19.466 2.905c-0.34 0.68 -0.593 1.695 -0.721 2.246l5.592 1.059c0.155 -0.395 0.344 -0.743 0.572 -1.192l-5.444 -2.112zm-1.061 3.857c-0.465 2.967 -0.498 5.72 -0.248 7.182 0.007 0.02 0.441 -2.514 1.882 -3.938 1.255 -1.243 2.853 -1.486 3.42 -1.467 0 -0.006 0.284 -0.97 0.244 -0.972z"
+                            fill="#18453b" />
+                        </svg>
+                </div>
+                <div>
+                    <h2>Quick Links</h2>
+                    <h3>Projects | About | Contact</h3>
+                </div>
+            </div>
+    
+            <!-- Duplicate sections for continuous scroll -->
             <div class="footer-section">
                 <div class="logo-container">
                     <!-- Your existing logo/title content -->
@@ -227,7 +214,7 @@
                                 extra menus and user visibility (The size will be widely adjustable for users with visual impairment, and there will 
                                 still be a limit to how far the menus can go. an optional sub menu will instead be used that can be dropped down on 
                                 the right hand side, and sorting will be managed by app developer. basically same on right hand side, except option for scrolling as well. 
-                                calender then battery are permanently (but optional within settings) to the right of the centered and 2 pixels larger clock. 
+                                calender then battery are permanently (but optional within settings) to the right of the center and 2 pixels larger clock. 
                                 this clock will be left mostly alone by me, but a seperate class will be created for it to be worked off of. a perfect jumping point if anyone
                                 else would like to upload their own clock modules with full accreditation and links to pages.
                                 .)
@@ -247,10 +234,12 @@
                 </div>
                 <div>
                     <h2>Technologies</h2>
+                    <h3>Unix</h3>
+                    <h3>C++</h3>
                     <h3>HTML</h3>
                     <h3>CSS</h3>
                     <h3>JavaScript</h3>
-                    <h3>C++</h3>
+                    <h3>And Much More!</h3>
                 </div>
             </div>
     
@@ -266,7 +255,8 @@
                 <div>
                     <h2>Get in Touch</h2>
                     <h3>evanross594@gmail.com</h3>
-                    <h3>LinkedIn</h3>
+                    <h3><a href="https://www.linkedin.com/in/evan-ross-648bb829a/">LinkedIn</a></h3>
+                    <h3><a href="mailto:evanross594@gmail.com">Email me directly</a></h3>
                 </div>
             </div>
     
@@ -284,13 +274,10 @@
                     <h3>Projects | About | Contact</h3>
                 </div>
             </div>
-    
-            <!-- Duplicate sections for continuous scroll -->
             <!-- Copy the same sections again, excluding the first static section -->
         </div>
     </footer>
     
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,149 @@
+/* Fade in scroll effect */
+
+/* Initial state for fade-in elements */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Start slightly below */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Active state when element is in view */
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+    /* Back to original position */
+}
+
+/* Section Styles */
+.container {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    
+}
+
+.project-list {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.project {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* PDF Section Styling */
+.pdf-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.pdf-preview {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.pdf-actions .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-actions .btn:hover {
+    background-color: #555;
+}
+
+.repo-tree {
+  background-color: #1e1e1e;
+  color: #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Consolas', monospace;
+  max-width: 600px;
+  margin: auto;
+}
+
+.folder {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 0;
+  user-select: none;
+}
+
+.folder:hover {
+  background-color: #252526;
+}
+
+.folder i.fa-folder {
+  margin-right: 8px;
+  color: #fbc531;
+}
+
+.folder i.fa-caret-right {
+  margin-right: 6px;
+  transition: transform 0.2s ease;
+}
+
+.folder.open i.fa-caret-right {
+  transform: rotate(90deg);
+}
+
+.folder-name {
+  font-weight: 500;
+}
+
+.contents {
+  display: none;
+  margin-left: 1.5rem;
+  border-left: 1px dashed #444;
+  padding-left: 0.5rem;
+}
+
+.file, .subfolder {
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+}
+
+.file i {
+  margin-right: 8px;
+  color: #6cace4;
+}
+
+.github-link {
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #6cace4;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: #9cd1ff;
+}
+
+.repo-contents {
+  transition: all 0.3s ease;
+}
+.folder:hover {
+  background-color: #252526;
+}
+
