@@ -6,13 +6,19 @@ rule html
   command = python3 tools/build_html.py $out "$title" $in
   description = Building $out
 
+rule assets
+  command = python3 tools/copy_assets.py $out
+  description = Copying site assets
+
 build dist/style.css: bundle styles/base-header.css styles/navigation.css styles/animations-content.css styles/footer.css styles/articles.css | tools/bundle_assets.py
 build dist/script.js: bundle scripts/animations.js scripts/header.js scripts/navigation.js scripts/github-repos.js | tools/bundle_assets.py
 
-build dist/index.html: html templates/main.html content/home.html | tools/build_html.py
+build dist/assets.stamp: assets Images/CoverPhoto.jpg pdf$ files/Ross-Resume.pdf pdf$ files/Ross-Resume2024.pdf pdf$ files/Ross-Resume2025.pdf | tools/copy_assets.py
+
+build dist/index.html: html templates/main.html content/home.html | tools/build_html.py || dist/assets.stamp
   title = My Portfolio
 
-build dist/buildlog.html: html templates/main.html content/buildlog.html | tools/build_html.py
+build dist/buildlog.html: html templates/main.html content/buildlog.html | tools/build_html.py || dist/assets.stamp
   title = How This Site Was Made
 
-default dist/style.css dist/script.js dist/index.html dist/buildlog.html
+default dist/style.css dist/script.js dist/index.html dist/buildlog.html dist/assets.stamp
